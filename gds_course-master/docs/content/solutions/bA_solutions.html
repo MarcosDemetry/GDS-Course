@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Solutions for block A &#8212; A course on Geographic Data Science</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">A course on Geographic Data Science</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Information
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../infrastructure.html">
+   Infrastructure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assessment.html">
+   Assessment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../datasets.html">
+   Datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  A - Introduction
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bA/concepts_A.html">
+   Concepts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bA/lab_A.html">
+   Hands-on
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bA/diy_A.html">
+   Do-It-Yourself
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  B - Open Science
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bB/concepts_B.html">
+   Concepts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bB/lab_B.html">
+   Hands-on
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bB/diy_B.html">
+   Do-It-Yourself
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  C - Spatial Data
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bC/concepts_C.html">
+   Concepts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bC/lab_C.html">
+   Hands-on
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bC/diy_C.html">
+   Do-It-Yourself
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  D - Mapping Data
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bD/concepts_D.html">
+   Concepts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bD/lab_D.html">
+   Hands-on
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bD/diy_D.html">
+   Do-It-Yourself
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  E - Spatial Weights
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bE/concepts_E.html">
+   Concepts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bE/lab_E.html">
+   Hands-on
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bE/diy_E.html">
+   Do-It-Yourself
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  F - ESDA
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bF/concepts_F.html">
+   Concepts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bF/lab_F.html">
+   Hands-on
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bF/diy_F.html">
+   Do-It-Yourself
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  G - Clustering
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bG/concepts_G.html">
+   Concepts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bG/lab_G.html">
+   Hands-on
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bG/diy_G.html">
+   Do-It-Yourself
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  H - Points
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bH/concepts_H.html">
+   Concepts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bH/lab_H.html">
+   Hands-on
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bH/diy_H.html">
+   Do-It-Yourself
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/solutions/bA_solutions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/darribas/gds_course/master?urlpath=tree/content/solutions/bA_solutions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Solutions for block A
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-ii">
+     Task II
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chocolate-chip-cookie-dough-ice-cream">
+   Chocolate chip cookie dough ice cream
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contents">
+     Contents
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#history">
+     History
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preparation">
+     Preparation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#see-also">
+     See also
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="solutions-for-block-a">
+<h1>Solutions for block A<a class="headerlink" href="#solutions-for-block-a" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="task-ii">
+<h2>Task II<a class="headerlink" href="#task-ii" title="Permalink to this headline">¶</a></h2>
+<p>See a working solution below:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span># Chocolate chip cookie dough ice cream
+
+---
+
+&gt; From Wikipedia, the free encyclopedia
+
+**Chocolate chip cookie dough ice cream** is a popular ice cream flavor in which unbaked chunks of [chocolate chip](https://en.wikipedia.org/wiki/Chocolate_chip) [cookie dough](https://en.wikipedia.org/wiki/Cookie_dough) are embedded in [vanilla flavored ice cream](https://en.wikipedia.org/wiki/Vanilla_ice_cream).
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chocolate_chip_cookie_dough_ice_cream_with_orange_spoon.jpg/375px-Chocolate_chip_cookie_dough_ice_cream_with_orange_spoon.jpg)
+
+**Type** [Ice cream](https://en.wikipedia.org/wiki/Ice_cream)
+
+**Place of origin** [United States](https://en.wikipedia.org/wiki/United_States)
+
+**Created by** [Ben &amp; Jerry&#39;s](https://en.wikipedia.org/wiki/Ben_%26_Jerry%27s)
+
+**Main ingredients** [Chocolate chip cookie](https://en.wikipedia.org/wiki/Chocolate_chip_cookie) dough, [ice cream](https://en.wikipedia.org/wiki/Ice_cream)
+
+---
+
+[Cookbook: Chocolate chip cookie dough ice cream](https://en.wikibooks.org/wiki/Special:Search/Cookbook:_Chocolate_chip_cookie_dough_ice_cream)
+
+### Contents
+
+1. History
+1. Preparation
+1. See also
+1. References
+
+## History
+
+---
+
+Chocolate chip cookie dough ice cream was said to have originated in 1984 at the first [Ben &amp; Jerry&#39;s](https://en.wikipedia.org/wiki/Ben_%26_Jerry%27s) &quot;scoop shop&quot; in [Burlington, Vermont](https://en.wikipedia.org/wiki/Burlington,_Vermont), from an anonymous suggestion on their flavor suggestion board.[1] In 1991, Ben &amp; Jerry&#39;s began selling pints of the flavor which quickly became popular with consumers. By 1992, chocolate chip cookie dough accounted for 20 percent of the company&#39;s total ice cream sales, and other ice cream manufacturers such as [Dreyer&#39;s](https://en.wikipedia.org/wiki/Dreyer%27s) and [Mrs. Fields](https://en.wikipedia.org/wiki/Mrs._Fields) began making their own versions of the flavor.[2]
+
+
+## Preparation
+
+---
+
+Beginning in 1990, [Rhino Foods](https://en.wikipedia.org/wiki/Rhino_Foods) manufactured the cookie dough used in Ben &amp; Jerry&#39;s chocolate chip cookie dough ice cream. They invented a technique for maintaining the chewy consistency of the cookie dough when frozen, which the founder described as a &quot;technological breakthrough&quot;.[3]
+
+Because of the [health risks of eating raw cookie dough](https://en.wikipedia.org/wiki/Cookie_dough#Health_risks), the dough used in cookie dough ice cream is pasteurized and heat-treated. For this reason, the dough is not suitable for baking.[4] 
+
+## See also
+
+---
+
+* [Cookies and cream](https://en.wikipedia.org/wiki/Cookies_and_cream)
+* [Stracciatella (ice cream)](https://en.wikipedia.org/wiki/Stracciatella_(ice_cream))
+* [List of ice cream flavors](https://en.wikipedia.org/wiki/List_of_ice_cream_flavors)
+
+## References
+
+---
+
+1. ^ [&quot;Ben &amp; Jerry&#39;s Most Popular Flavour Was Invented in 1984&quot;](http://www.benandjerrys.ca/en/whats-new/cookie-dough-legendary). *benandjerrys.ca*.
+1. ^ Lii, Jane H. (2 August 1992). [&quot;All About/Ice Cream; In the Cut-Throat World of Ice Cream, Flavormania!&quot;](https://www.nytimes.com/1992/08/02/business/all-about-ice-cream-in-the-cut-throat-world-of-ice-cream-flavormania.html) – via NYTimes.com.
+1. ^ Vaughan-Hughes, Pip. [&quot;Rollin&#39; in Dough&quot;](http://www.vermontguides.com/1999/12-dec/dec2.htm). *vermontguides.com*.
+1. ^ Hoffman, Jan (22 November 2017). [&quot;Thanks a Lot! New Reasons Not to Eat Cookie Dough&quot;](https://web.archive.org/web/20171123001907/https://www.nytimes.com/2017/11/22/health/flour-raw-danger.html). Archived from [the original](https://www.nytimes.com/2017/11/22/health/flour-raw-danger.html) on 23 November 2017 – via NYTimes.com.
+</pre></div>
+</div>
+<p>Which renders as:</p>
+</div>
+</div>
+<div class="section" id="chocolate-chip-cookie-dough-ice-cream">
+<h1>Chocolate chip cookie dough ice cream<a class="headerlink" href="#chocolate-chip-cookie-dough-ice-cream" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<blockquote>
+<div><p>From Wikipedia, the free encyclopedia</p>
+</div></blockquote>
+<p><strong>Chocolate chip cookie dough ice cream</strong> is a popular ice cream flavor in which unbaked chunks of <a class="reference external" href="https://en.wikipedia.org/wiki/Chocolate_chip">chocolate chip</a> <a class="reference external" href="https://en.wikipedia.org/wiki/Cookie_dough">cookie dough</a> are embedded in <a class="reference external" href="https://en.wikipedia.org/wiki/Vanilla_ice_cream">vanilla flavored ice cream</a>.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chocolate_chip_cookie_dough_ice_cream_with_orange_spoon.jpg/375px-Chocolate_chip_cookie_dough_ice_cream_with_orange_spoon.jpg" /></p>
+<p><strong>Type</strong> <a class="reference external" href="https://en.wikipedia.org/wiki/Ice_cream">Ice cream</a></p>
+<p><strong>Place of origin</strong> <a class="reference external" href="https://en.wikipedia.org/wiki/United_States">United States</a></p>
+<p><strong>Created by</strong> <a class="reference external" href="https://en.wikipedia.org/wiki/Ben_%26_Jerry%27s">Ben &amp; Jerry’s</a></p>
+<p><strong>Main ingredients</strong> <a class="reference external" href="https://en.wikipedia.org/wiki/Chocolate_chip_cookie">Chocolate chip cookie</a> dough, <a class="reference external" href="https://en.wikipedia.org/wiki/Ice_cream">ice cream</a></p>
+<hr class="docutils" />
+<p><a class="reference external" href="https://en.wikibooks.org/wiki/Special:Search/Cookbook:_Chocolate_chip_cookie_dough_ice_cream">Cookbook: Chocolate chip cookie dough ice cream</a></p>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>History</p></li>
+<li><p>Preparation</p></li>
+<li><p>See also</p></li>
+<li><p>References</p></li>
+</ol>
+</div>
+<div class="section" id="history">
+<h2>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Chocolate chip cookie dough ice cream was said to have originated in 1984 at the first <a class="reference external" href="https://en.wikipedia.org/wiki/Ben_%26_Jerry%27s">Ben &amp; Jerry’s</a> “scoop shop” in <a class="reference external" href="https://en.wikipedia.org/wiki/Burlington,_Vermont">Burlington, Vermont</a>, from an anonymous suggestion on their flavor suggestion board.[1] In 1991, Ben &amp; Jerry’s began selling pints of the flavor which quickly became popular with consumers. By 1992, chocolate chip cookie dough accounted for 20 percent of the company’s total ice cream sales, and other ice cream manufacturers such as <a class="reference external" href="https://en.wikipedia.org/wiki/Dreyer%27s">Dreyer’s</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Mrs._Fields">Mrs. Fields</a> began making their own versions of the flavor.[2]</p>
+</div>
+<div class="section" id="preparation">
+<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Beginning in 1990, <a class="reference external" href="https://en.wikipedia.org/wiki/Rhino_Foods">Rhino Foods</a> manufactured the cookie dough used in Ben &amp; Jerry’s chocolate chip cookie dough ice cream. They invented a technique for maintaining the chewy consistency of the cookie dough when frozen, which the founder described as a “technological breakthrough”.[3]</p>
+<p>Because of the <a class="reference external" href="https://en.wikipedia.org/wiki/Cookie_dough#Health_risks">health risks of eating raw cookie dough</a>, the dough used in cookie dough ice cream is pasteurized and heat-treated. For this reason, the dough is not suitable for baking.[4]</p>
+</div>
+<div class="section" id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Cookies_and_cream">Cookies and cream</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Stracciatella_(ice_cream)">Stracciatella (ice cream)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/List_of_ice_cream_flavors">List of ice cream flavors</a></p></li>
+</ul>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<ol class="simple">
+<li><p>^ <a class="reference external" href="http://www.benandjerrys.ca/en/whats-new/cookie-dough-legendary">“Ben &amp; Jerry’s Most Popular Flavour Was Invented in 1984”</a>. <em>benandjerrys.ca</em>.</p></li>
+<li><p>^ Lii, Jane H. (2 August 1992). <a class="reference external" href="https://www.nytimes.com/1992/08/02/business/all-about-ice-cream-in-the-cut-throat-world-of-ice-cream-flavormania.html">“All About/Ice Cream; In the Cut-Throat World of Ice Cream, Flavormania!”</a> – via NYTimes.com.</p></li>
+<li><p>^ Vaughan-Hughes, Pip. <a class="reference external" href="http://www.vermontguides.com/1999/12-dec/dec2.htm">“Rollin’ in Dough”</a>. <em>vermontguides.com</em>.</p></li>
+<li><p>^ Hoffman, Jan (22 November 2017). <a class="reference external" href="https://web.archive.org/web/20171123001907/https://www.nytimes.com/2017/11/22/health/flour-raw-danger.html">“Thanks a Lot! New Reasons Not to Eat Cookie Dough”</a>. Archived from <a class="reference external" href="https://www.nytimes.com/2017/11/22/health/flour-raw-danger.html">the original</a> on 23 November 2017 – via NYTimes.com.</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/solutions"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dani Arribas-Bel<br/>
+        
+          <div class="extra_footer">
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">A course on Geographic Data Science</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://darribas.org" property="cc:attributionName" rel="cc:attributionURL">Dani Arribas-Bel</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-6032674-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
