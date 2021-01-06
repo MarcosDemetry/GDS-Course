@@ -7,11 +7,11 @@ I'm taking the course on my own, at my own pace, without actually submitting any
 
 
 ## Progress
-- [X] Section A
-- [X] Section B
-- [X] Section C
-- [ ] Section D
-- [ ] Section E
-- [ ] Section F
-- [ ] Section G
-- [ ] Section H
+- [X] A: Introduction
+- [X] B: Open Science
+- [X] C: Spatial Data
+- [ ] D: Mapping Data
+- [ ] E: Spatial Weights
+- [ ] F: ESDA
+- [ ] G: Clustering
+- [ ] H: Points
