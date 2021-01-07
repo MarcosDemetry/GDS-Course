@@ -11,7 +11,7 @@ I'm taking the course on my own, at my own pace, without actually submitting any
 - [X] B: Open Science
 - [X] C: Spatial Data
 - [X] D: Mapping Data
-- [ ] E: Spatial Weights
+- [X] E: Spatial Weights
 - [ ] F: ESDA
 - [ ] G: Clustering
 - [ ] H: Points
