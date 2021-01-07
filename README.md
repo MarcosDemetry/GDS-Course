@@ -12,6 +12,6 @@ I'm taking the course on my own, at my own pace, without actually submitting any
 - [X] C: Spatial Data
 - [X] D: Mapping Data
 - [X] E: Spatial Weights
-- [ ] F: ESDA
+- [X] F: ESDA
 - [ ] G: Clustering
 - [ ] H: Points
